@@ -118,7 +118,7 @@
                                     <td>
                                         <img style="height: 75px"
                                              onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                             src="{{asset('storage/notification')}}/{{$notification['image']}}">
+                                             src="{{asset('storage/app/public/notification')}}/{{$notification['image']}}">
                                         {{--<span class="d-block font-size-sm">{{$banner['image']}}</span>--}}
                                     </td>
                                     <td>

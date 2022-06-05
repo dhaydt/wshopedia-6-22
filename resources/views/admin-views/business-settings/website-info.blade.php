@@ -219,7 +219,7 @@
                                 <center>
                                     <img height="200" style="width: 100%" id="viewerShop"
                                          onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                         src="{{asset('storage/shop')}}/{{\App\CPU\Helpers::get_business_settings('shop_banner')}}">
+                                         src="{{asset('storage/app/public/shop')}}/{{\App\CPU\Helpers::get_business_settings('shop_banner')}}">
                                 </center>
                                 <hr>
                                 <div class="row pl-4 pr-4">
@@ -1029,7 +1029,7 @@
                                 <center>
                                     <img width="200" height="60" id="viewerWL"
                                          onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                         src="{{asset('storage/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_web_logo'])->pluck('value')[0]}}">
+                                         src="{{asset('storage/app/public/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_web_logo'])->pluck('value')[0]}}">
                                 </center>
                                 <hr>
                                 <div class="row pl-4 pr-4">
@@ -1055,7 +1055,7 @@
                                 <center>
                                     <img width="100" height="60" id="viewerML"
                                          onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                         src="{{asset('storage/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_mobile_logo'])->pluck('value')[0]}}">
+                                         src="{{asset('storage/app/public/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_mobile_logo'])->pluck('value')[0]}}">
                                 </center>
                                 <hr>
                                 <div class="row pl-4 pr-4">
@@ -1084,7 +1084,7 @@
                                 <center>
                                     <img width="250" id="viewerWFL"
                                          onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                         src="{{asset('storage/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_footer_logo'])->pluck('value')[0]}}">
+                                         src="{{asset('storage/app/public/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_footer_logo'])->pluck('value')[0]}}">
                                 </center>
                                 <hr>
                                 <div class="row pl-4 pr-4">
@@ -1109,7 +1109,7 @@
                                 <center>
                                     <img width="60" id="viewerFI"
                                          onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                         src="{{asset('storage/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_fav_icon'])->pluck('value')[0]}}">
+                                         src="{{asset('storage/app/public/company')}}/{{\App\Model\BusinessSetting::where(['type' => 'company_fav_icon'])->pluck('value')[0]}}">
                                 </center>
                                 <hr>
                                 <div class="row pl-4 pr-4">
@@ -1134,7 +1134,7 @@
                                 <center>
                                     <img width="60" id="viewerLoader"
                                          onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                         src="{{asset('storage/company')}}/{{\App\CPU\Helpers::get_business_settings('loader_gif')}}">
+                                         src="{{asset('storage/app/public/company')}}/{{\App\CPU\Helpers::get_business_settings('loader_gif')}}">
                                 </center>
                                 <hr>
                                 <div class="row pl-4 pr-4">

@@ -7,9 +7,9 @@
     </title>
     <meta name="viewport" content="width=1024">
     <link rel="apple-touch-icon" sizes="180x180"
-          href="{{asset('storage/company')}}/{{$web_config['fav_icon']->value}}">
+          href="{{asset('storage/app/public/company')}}/{{$web_config['fav_icon']->value}}">
     <link rel="icon" type="image/png" sizes="32x32"
-          href="{{asset('storage/company')}}/{{$web_config['fav_icon']->value}}">
+          href="{{asset('storage/app/public/company')}}/{{$web_config['fav_icon']->value}}">
 
     <link rel="stylesheet" media="screen"
           href="{{asset('public/assets/front-end')}}/vendor/simplebar/dist/simplebar.min.css"/>
@@ -655,7 +655,7 @@
         <div class="col-12" style="width:85%;position: fixed;z-index: 9999;display: flex;align-items: center;justify-content: center;">
             <div id="loading" style="display: none">
                 <img width="200"
-                     src="{{asset('storage/company')}}/{{\App\CPU\Helpers::get_business_settings('loader_gif')}}"
+                     src="{{asset('storage/app/public/company')}}/{{\App\CPU\Helpers::get_business_settings('loader_gif')}}"
                      onerror="this.src='{{asset('public/assets/front-end/img/loader.gif')}}'">
             </div>
         </div>

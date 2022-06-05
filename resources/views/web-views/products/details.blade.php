@@ -13,13 +13,13 @@
     <!-- Viewport-->
 
     @if($product['meta_image']!=null)
-        <meta property="og:image" content="{{asset("storage/product/meta")}}/{{$product->meta_image}}"/>
+        <meta property="og:image" content="{{asset("storage/app/public/product/meta")}}/{{$product->meta_image}}"/>
         <meta property="twitter:card"
-              content="{{asset("storage/product/meta")}}/{{$product->meta_image}}"/>
+              content="{{asset("storage/app/public/product/meta")}}/{{$product->meta_image}}"/>
     @else
-        <meta property="og:image" content="{{asset("storage/product/thumbnail")}}/{{$product->thumbnail}}"/>
+        <meta property="og:image" content="{{asset("storage/app/public/product/thumbnail")}}/{{$product->thumbnail}}"/>
         <meta property="twitter:card"
-              content="{{asset("storage/product/thumbnail/")}}/{{$product->thumbnail}}"/>
+              content="{{asset("storage/app/public/product/thumbnail/")}}/{{$product->thumbnail}}"/>
     @endif
 
     @if($product['meta_title']!=null)
@@ -195,8 +195,8 @@
                                     id="image{{$key}}">
                                     <img class="cz-image-zoom img-responsive"
                                          onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                         src="{{asset("storage/product/$photo")}}"
-                                         data-zoom="{{asset("storage/product/$photo")}}"
+                                         src="{{asset("storage/app/public/product/$photo")}}"
+                                         data-zoom="{{asset("storage/app/public/product/$photo")}}"
                                          alt="Product image" width="">
                                     <div class="cz-image-zoom-pane"></div>
                                 </div>
@@ -215,7 +215,7 @@
                                                        href="#image{{$key}}">
                                                         <img
                                                             onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                                            src="{{asset("storage/product/$photo")}}"
+                                                            src="{{asset("storage/app/public/product/$photo")}}"
                                                             alt="Product thumb">
                                                     </a>
                                                 </div>
@@ -429,7 +429,7 @@
                         <div class="shop_image d-flex justify-content-center align-items-center">
                             <a href="#" class="d-flex justify-content-center">
                                 <img style="height: 65px; width: 65px; border-radius: 50%"
-                                     src="{{asset('storage/shop')}}/{{$product->seller->shop->image}}"
+                                     src="{{asset('storage/app/public/shop')}}/{{$product->seller->shop->image}}"
                                      onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
                                      alt="">
                             </a>
@@ -530,7 +530,7 @@
                         <div class="shop_image d-flex justify-content-center align-items-center">
                             <a href="{{ route('shopView',[0]) }}" class="d-flex justify-content-center">
                                 <img style="height: 65px;width: 65px; border-radius: 50%"
-                                     src="{{asset("storage/company")}}/{{$web_config['fav_icon']->value}}"
+                                     src="{{asset("storage/app/public/company")}}/{{$web_config['fav_icon']->value}}"
                                      onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
                                      alt="">
                             </a>
@@ -786,7 +786,7 @@
                                                             <img style="max-height: 64px;"
                                                                  class="rounded-circle" width="64"
                                                                  onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                                                 src="{{asset("storage/profile")}}/{{(isset($productReview->user)?$productReview->user->image:'')}}"
+                                                                 src="{{asset("storage/app/public/profile")}}/{{(isset($productReview->user)?$productReview->user->image:'')}}"
                                                                  alt="{{isset($productReview->user)?$productReview->user->f_name:'not exist'}}"/>
                                                             <div
                                                                 class="media-body {{Session::get('direction') === "rtl" ? 'pr-3' : 'pl-3'}}">
@@ -817,10 +817,10 @@
                                                             @foreach (json_decode($productReview->attachment) as $key => $photo)
                                                                 <img
                                                                     style="cursor: pointer;border-radius: 5px;border:1px;border-color: #7a6969; height: 67px ; margin-{{Session::get('direction') === "rtl" ? 'left' : 'right'}}: 5px;"
-                                                                    onclick="showInstaImage('{{asset("storage/review/$photo")}}')"
+                                                                    onclick="showInstaImage('{{asset("storage/app/public/review/$photo")}}')"
                                                                     class="cz-image-zoom"
                                                                     onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                                                    src="{{asset("storage/review/$photo")}}"
+                                                                    src="{{asset("storage/app/public/review/$photo")}}"
                                                                     alt="Product review" width="67">
                                                             @endforeach
                                                         @endif

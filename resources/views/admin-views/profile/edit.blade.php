@@ -88,7 +88,7 @@
                             <img id="viewer"
                                  onerror="this.src='{{asset('public/assets/back-end/img/160x160/img1.jpg')}}'"
                                  class="avatar-img"
-                                 src="{{asset('storage/admin')}}/{{$data->image}}"
+                                 src="{{asset('storage/app/public/admin')}}/{{$data->image}}"
                                  alt="Image">
                         </label>
                         <!-- End Avatar -->

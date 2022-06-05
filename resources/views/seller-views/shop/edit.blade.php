@@ -34,7 +34,7 @@
                                     <input type="number" name="contact" value="{{$shop->contact}}" class="form-control" id="name"
                                             required>
                                 </div>
-
+                                
                                 @if ($shop->seller->country == 'ID')
                                 <input type="hidden" name="country" value="{{ $shop->seller->country }}">
                                 @php($province = App\CPU\Helpers::province())
@@ -92,7 +92,7 @@
                                     <input type="text" class="form-control" name="city" id="address-city">
                                 </div>
                                 @endif
-
+                                
                                 <div class="form-group">
                                     <label for="address">{{\App\CPU\translate('Address')}} <span class="text-danger">*</span></label>
                                     <textarea type="text" rows="4" name="address" value="" class="form-control" id="address"
@@ -111,7 +111,7 @@
                                 <div class="text-center">
                                     <img style="width: auto;border: 1px solid; border-radius: 10px; max-height:200px;" id="viewer"
                                     onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                    src="{{asset('storage/shop/'.$shop->image)}}" alt="Product thumbnail"/>
+                                    src="{{asset('storage/app/public/shop/'.$shop->image)}}" alt="Product thumbnail"/>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-4 mt-2">
@@ -129,7 +129,7 @@
                                 <div class="text-center">
                                     <img style="width: auto; height:auto; border: 1px solid; border-radius: 10px; max-height:200px" id="viewerBanner"
                                          onerror="this.src='{{asset('public/assets/front-end/img/image-place-holder.png')}}'"
-                                         src="{{asset('storage/shop/banner/'.$shop->banner)}}" alt="Product thumbnail"/>
+                                         src="{{asset('storage/app/public/shop/banner/'.$shop->banner)}}" alt="Product thumbnail"/>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +234,7 @@
                 });
             }
         });
-
+        
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
